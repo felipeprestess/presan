@@ -38,21 +38,64 @@ header {
 }
 
 .logo img {
-    height: 100px; /* Ajusta o tamanho da logo SVG */
+    height: 100px; /* Aumenta o tamanho da logo */
 }
 
-nav ul {
-    list-style: none;
+nav {
     display: flex;
+    align-items: center;
 }
 
-nav ul li {
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
     margin-left: 20px;
 }
 
-nav ul li a {
+.nav-links li a {
     color: white;
     text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
 
 .hero-section {

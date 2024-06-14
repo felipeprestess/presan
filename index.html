@@ -6,19 +6,26 @@
     <title>PreSan Solutions</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <!-- <img src="logo.svg" alt="PreSan Solutions Logo"> -->PRESAN
+            <!-- <img src="logo.svg" alt="PreSan Solutions Logo"> -->
+             PRESAN
         </div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#hero">O que fazemos</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
 
@@ -65,7 +72,7 @@
     <section id="contact" class="contact-section">
         <h2>Entre em Contato</h2>
         <p>Estamos prontos para iniciar novos projetos. Entre em contato e descubra como podemos ajudar seu negócio a crescer.</p>
-        <form action="#" method="post">
+        <form id="contact-form">
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" required>
 
@@ -95,6 +102,24 @@
                 startDelay: 500,
                 loop: true
             });
+        });
+
+        (function(){
+            emailjs.init("YOUR_USER_ID");
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('Email enviado com sucesso!');
+                }, function(error) {
+                    alert('Ocorreu um erro ao enviar o email: ' + JSON.stringify(error));
+                });
+        });
+
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('open');
         });
     </script>
 </body>
