@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PreSan Solutions</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
     <header>
@@ -24,13 +24,13 @@
 
     <section id="hero" class="hero-section">
         <div class="hero-content">
-            <h1>Serviço Digital de Qualidade que Você Realmente Deseja</h1>
+            <h1 id="typed-text"></h1>
             <p>Entregamos serviços digitais de alto nível com nossa equipe experiente. Comece agora conosco.</p>
             <a href="#contact" class="cta-button">Vamos Conversar</a>
         </div>
-        <div class="hero-image">
-            <img src="hero-image.png" alt="Hero Image">
-        </div>
+        <!-- <div class="hero-image">
+            <img src="hero-image.jpg" alt="Hero Image">
+        </div> -->
     </section>
 
     <section id="services" class="services-section">
@@ -88,5 +88,18 @@
     <footer>
         <p>&copy; 2024 PreSan Solutions. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Typed('#typed-text', {
+                strings: ["Serviço Digital de Qualidade que Você Realmente Deseja"],
+                typeSpeed: 50,
+                backSpeed: 25,
+                backDelay: 2000,
+                startDelay: 500,
+                loop: true
+            });
+        });
+    </script>
 </body>
 </html>
