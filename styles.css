@@ -108,6 +108,10 @@ nav {
     }
 }
 
+ul {
+    list-style: none; /* Adiciona esta linha */
+}
+
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -272,7 +276,7 @@ form button:hover {
     overflow: hidden;
     text-align: center;
     padding: 60px 0;
-    background-color: white; /* Fundo branco para a seção */
+    background-color: rgb(255, 255, 255) !important; /* Fundo branco para a seção */
     min-height: 600px; /* Altura mínima aumentada */
     display: flex;
     align-items: center;
@@ -287,7 +291,7 @@ form button:hover {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255) !important;
   }
   
   #digital-solutions .content {
@@ -358,4 +362,28 @@ form button:hover {
     text-align: center;
     padding: 20px;
     border-top: 1px solid #333;
+}
+
+.service-details {
+    display: none;
+    transition: max-height 0.5s ease-out;
+}
+
+.service.open .service-details {
+    display: block;
+}
+
+.read-more-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
 }
