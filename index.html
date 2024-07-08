@@ -6,15 +6,12 @@
     <title>PreSan Solutions</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
-    
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>    
 </head>
 <body>
     <header>
         <div class="logo">
-            <!-- <img src="logo.svg" alt="PreSan Solutions Logo"> -->
              PRESAN
         </div>
         <nav>
@@ -153,6 +150,7 @@
                 <button class="read-more-btn">Saiba Mais</button>
             </div>
         </div>
+        <button id="toggle-services-btn" class="toggle-services-btn">Conheça todos nossos serviços e expanda</button>
     </section>
 
     <section id="about" class="about-section" data-aos="fade-up">
@@ -238,65 +236,13 @@
           <p>© 2024 PreSan Solutions. Todos os direitos reservados.</p>
         </div>
       </footer>
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const buttons = document.querySelectorAll('.read-more-btn');
-            buttons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const service = this.closest('.service');
-                    const details = service.querySelector('.service-details');
-                service.classList.toggle('open');
-                if (service.classList.contains('open')) {
-                    details.style.display = 'block';
-                    details.style.maxHeight = details.scrollHeight + 'px';
-                    this.textContent = 'Mostrar Menos';
-                } else {
-                    details.style.maxHeight = '0';
-                    setTimeout(() => {
-                        details.style.display = 'none';
-                    }, 500); // Tempo de transição
-                    this.textContent = 'Saiba Mais';
-                }
-                });
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            new Typed('#typed-text', {
-                strings: ["Serviço Digital de Qualidade que Você Realmente Deseja"],
-                typeSpeed: 50,
-                backSpeed: 25,
-                backDelay: 2000,
-                startDelay: 500,
-                loop: true
-            });
-        });
-
-        (function(){
-            emailjs.init("YOUR_USER_ID");
-        })();
-
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                .then(function() {
-                    alert('Email enviado com sucesso!');
-                }, function(error) {
-                    alert('Ocorreu um erro ao enviar o email: ' + JSON.stringify(error));
-                });
-        });
-
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('open');
-        });
-    </script>
+      <script src="roller.js"></script>
+      <script src="services-details.js"></script>
+      <script src="hero-typed.js"></script>
+    <script src="mail-hero-logo.js"></script>
+    <script src="menu-hamburguer.js"></script>p
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-      particlesJS.load('particles-js', 'particles.json', function() {
-        console.log('particles.js loaded - callback');
-      });
-    </script>
+    <script src="particles-loader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();

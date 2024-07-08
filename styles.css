@@ -387,3 +387,30 @@ form button:hover {
 .read-more-btn:hover {
     background-color: #0056b3;
 }
+
+/* ROLER DOS SERVICOS */
+
+.service-list .service:nth-child(n+5) {
+    display: none;
+}
+
+.service-list.expanded .service:nth-child(n+5) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.toggle-services-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-services-btn:hover {
+    background-color: #0056b3;
+} 
