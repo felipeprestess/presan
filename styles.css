@@ -39,6 +39,8 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #333;
+    position: relative;
+    z-index: 4;
 }
 
 .logo img {
@@ -70,43 +72,59 @@ nav {
     text-decoration: none;
 }
 
+.nav-links.open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    z-index: 3;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
+    z-index: 5; /* Adicionado para garantir que esteja acima de outros elementos */
 }
 
-.hamburger .line {
+/* .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+} */
+
+.hamburger .line,
+.hamburger .close {
     width: 25px;
     height: 3px;
     background: white;
     margin: 5px;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
+.hamburger .close {
+    display: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
+
+.hamburger.open .line {
+    display: none;
+}
+
+.hamburger.open .close {
+    display: block;
+}
+
 
 ul {
     list-style: none; /* Adiciona esta linha */
