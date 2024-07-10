@@ -139,3 +139,40 @@
         padding: 15px;
     }
 }
+
+
+/* Specific adjustments for digital-solutions section */
+@media (max-width: 768px) {
+    #digital-solutions .content {
+        padding: 20px;
+    }
+
+    #digital-solutions .icons {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #digital-solutions .icons img {
+        width: 80px; /* Ajusta o tamanho dos ícones para dispositivos móveis */
+        height: 80px;
+    }
+
+    #digital-solutions .content h2 {
+        font-size: 1.75rem; /* Ajusta o tamanho do título */
+    }
+}
+
+@media (max-width: 576px) {
+    #digital-solutions .content {
+        padding: 10px;
+    }
+
+    #digital-solutions .icons img {
+        width: 60px; /* Ajusta ainda mais o tamanho dos ícones para telas menores */
+        height: 60px;
+    }
+
+    #digital-solutions .content h2 {
+        font-size: 1.5rem; /* Ajusta o tamanho do título */
+    }
+}
