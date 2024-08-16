@@ -1,6 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --primary-color: #00BF63;
+    --secondary-color: #FFFFFF;
+    --highlight-color: #000000;
+    --complementary-color: #0073BF;
+    --analogous-color-1: #00BF8F;
+    --analogous-color-2: #009F53;
+    --background-soft: #F0FFF4;
+}
+
 
 * {
     margin: 0;
@@ -11,9 +21,10 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #fff;
+    color: var(--background-soft);
     background: url('https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg') no-repeat center center fixed;
     background-size: cover;
+    background-color: var(--highlight-color);
     position: relative;
 }
 
@@ -38,7 +49,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #333;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     position: relative;
     z-index: 4;
 }
@@ -158,7 +170,7 @@ ul {
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: rgba(255, 0, 0, 0.7);
+    background-color: var(--analogous-color-2);
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -166,7 +178,7 @@ ul {
 }
 
 .cta-button:hover {
-    background-color: rgba(255, 0, 0, 1);
+    background-color: var(--analogous-color-1);
 }
 
 .services-section,
@@ -226,7 +238,7 @@ form textarea {
 
 form button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: var(--analogous-color-2);
     color: white;
     border: none;
     border-radius: 5px;
@@ -235,7 +247,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: var(--analogous-color-2);
 }
 
 #typed-text {
@@ -246,7 +258,7 @@ form button:hover {
 .services_icon {
     width: 50px; /* Ajuste o tamanho conforme necessário */
     height: 50px;
-    fill: #1E90FF; /* Cor padrão */
+    fill: var(--analogous-color-2); /* Cor padrão */
 }
 
 .dropdown {
@@ -257,7 +269,7 @@ form button:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: var(--primary-color);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -272,7 +284,7 @@ form button:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #111;
+    background-color: var(--primary-color);
 }
 
 .dropdown:hover .dropdown-content {
@@ -391,8 +403,17 @@ form button:hover {
     display: block;
 }
 
+a {
+    color: var(--complementary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .read-more-btn {
-    background-color: #007BFF;
+    background-color: var(--analogous-color-2);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -403,7 +424,7 @@ form button:hover {
 }
 
 .read-more-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--analogous-color-2);
 }
 
 /* ROLER DOS SERVICOS */
@@ -419,7 +440,7 @@ form button:hover {
 }
 
 .toggle-services-btn {
-    background-color: #007BFF;
+    background-color: var(--analogous-color-2);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -430,7 +451,7 @@ form button:hover {
 }
 
 .toggle-services-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--analogous-color-2);
 } 
 
 .centralizado {
